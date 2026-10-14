@@ -1,0 +1,1422 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>GV Group – Műszaki Tartalom 2026 | MgO SIP Technológia</title>
+  <meta name="description" content="GV Group Kft. részletes műszaki specifikációja 2026. MgO SIP panel házak vázszerketkész, félkész és kulcsrakész kivitelben. Kulcsrakész ár: 460–480 eFt/m².">
+  <meta name="robots" content="index, follow">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=League+Spartan:wght@400;500;600;700;900&family=Libre+Franklin:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #FFFFFF;
+      --ink: #0C0C0C;
+      --red: #C0392B;
+      --red-d: #96281B;
+      --gold: #B7950B;
+      --light: #F5F4F1;
+      --surface: #ECEAE6;
+      --muted: #6B6B64;
+      --border: #D4D2CC;
+      --dark: #111111;
+      --serif: 'League Spartan', sans-serif;
+      --body: 'Libre Franklin', sans-serif;
+      --mono: 'Space Mono', monospace;
+    }
+
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: var(--body);
+      font-size: 16px;
+      line-height: 1.65;
+      color: var(--ink);
+      background: var(--bg);
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* ── NAV ─────────────────────────────────────── */
+    nav {
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      background: var(--dark);
+      border-bottom: 2px solid var(--red);
+    }
+    .nav-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      padding: 0 24px;
+      height: 56px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+    }
+    .nav-logo {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 18px;
+      color: #fff;
+      text-decoration: none;
+      letter-spacing: 1px;
+      white-space: nowrap;
+    }
+    .nav-logo span { color: var(--red); }
+    .nav-links {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      list-style: none;
+      overflow-x: auto;
+      scrollbar-width: none;
+    }
+    .nav-links::-webkit-scrollbar { display: none; }
+    .nav-links a {
+      display: block;
+      padding: 0 14px;
+      height: 56px;
+      line-height: 56px;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: #aaa;
+      text-decoration: none;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      white-space: nowrap;
+      border-right: 1px solid #222;
+      transition: color .15s, background .15s;
+    }
+    .nav-links a:hover { color: #fff; background: #1a1a1a; }
+    .nav-cta {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 0.5px;
+      color: #fff;
+      background: var(--red);
+      text-decoration: none;
+      padding: 8px 16px;
+      white-space: nowrap;
+      flex-shrink: 0;
+      transition: background .15s;
+    }
+    .nav-cta:hover { background: var(--red-d); }
+
+    /* ── HERO ────────────────────────────────────── */
+    .hero {
+      background: var(--dark);
+      color: #fff;
+      padding: 72px 24px 64px;
+      position: relative;
+      overflow: hidden;
+    }
+    .hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: repeating-linear-gradient(
+        -45deg,
+        transparent,
+        transparent 40px,
+        rgba(255,255,255,.018) 40px,
+        rgba(255,255,255,.018) 41px
+      );
+    }
+    .hero-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      position: relative;
+    }
+    .hero-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 20px;
+      display: flex;
+      align-items: center;
+      gap: 10px;
+    }
+    .hero-tag::before {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 2px;
+      background: var(--red);
+    }
+    .hero-h1 {
+      font-family: var(--serif);
+      font-size: clamp(44px, 6vw, 80px);
+      font-weight: 900;
+      line-height: 1.02;
+      letter-spacing: -1px;
+      max-width: 820px;
+      margin-bottom: 24px;
+    }
+    .hero-h1 em {
+      color: var(--red);
+      font-style: normal;
+    }
+    .hero-sub {
+      font-size: 18px;
+      color: #aaa;
+      max-width: 560px;
+      margin-bottom: 48px;
+      line-height: 1.6;
+    }
+    .hero-stats {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2px;
+      border: 1px solid #333;
+      max-width: 920px;
+    }
+    .hero-stat {
+      padding: 24px 28px;
+      border-right: 1px solid #333;
+      background: #161616;
+    }
+    .hero-stat:last-child { border-right: none; }
+    .stat-val {
+      font-family: var(--serif);
+      font-size: 36px;
+      font-weight: 900;
+      color: #fff;
+      line-height: 1;
+      margin-bottom: 6px;
+    }
+    .stat-val em {
+      font-style: normal;
+      color: var(--red);
+    }
+    .stat-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: #666;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+    }
+
+    /* ── CERTIFICATIONS ─────────────────────────── */
+    .certs {
+      background: var(--red);
+      padding: 16px 24px;
+    }
+    .certs-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      align-items: center;
+    }
+    .cert-item {
+      font-family: var(--mono);
+      font-size: 12px;
+      color: rgba(255,255,255,.9);
+      letter-spacing: 0.5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .cert-item .cert-icon {
+      font-size: 16px;
+    }
+
+    /* ── SECTION WRAPPER ────────────────────────── */
+    .section {
+      padding: 72px 24px;
+    }
+    .section.alt { background: var(--light); }
+    .section.dark { background: var(--dark); color: #fff; }
+    .section-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+    .section-tag {
+      font-family: var(--mono);
+      font-size: 11px;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 12px;
+    }
+    .section-h2 {
+      font-family: var(--serif);
+      font-size: clamp(30px, 4vw, 48px);
+      font-weight: 900;
+      line-height: 1.08;
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+    }
+    .section-lead {
+      font-size: 17px;
+      color: var(--muted);
+      max-width: 600px;
+      margin-bottom: 48px;
+    }
+    .section.dark .section-lead { color: #999; }
+
+    /* ── PHASE CARDS ────────────────────────────── */
+    .phase-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 2px;
+    }
+    .phase-card {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 36px 32px;
+      position: relative;
+    }
+    .phase-card.featured {
+      border-color: var(--red);
+      border-width: 2px;
+    }
+    .phase-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      margin-bottom: 8px;
+    }
+    .phase-name {
+      font-family: var(--serif);
+      font-size: 28px;
+      font-weight: 900;
+      margin-bottom: 4px;
+      letter-spacing: -0.3px;
+    }
+    .phase-alt {
+      font-size: 13px;
+      color: var(--muted);
+      margin-bottom: 24px;
+      font-style: italic;
+    }
+    .phase-price {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 700;
+      color: var(--red);
+      padding: 12px 0;
+      border-top: 1px solid var(--border);
+      border-bottom: 1px solid var(--border);
+      margin-bottom: 24px;
+    }
+    .phase-price small {
+      font-size: 13px;
+      color: var(--muted);
+      font-weight: 400;
+      font-family: var(--body);
+    }
+    .phase-includes {
+      list-style: none;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+    .phase-includes li {
+      padding-left: 18px;
+      position: relative;
+      color: var(--ink);
+    }
+    .phase-includes li::before {
+      content: '→';
+      position: absolute;
+      left: 0;
+      color: var(--red);
+      font-size: 12px;
+    }
+    .phase-badge {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      background: var(--red);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1px;
+      padding: 4px 8px;
+      text-transform: uppercase;
+    }
+    .phase-cta {
+      display: block;
+      margin-top: 28px;
+      padding: 12px 20px;
+      background: var(--dark);
+      color: #fff;
+      text-decoration: none;
+      font-family: var(--mono);
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      text-align: center;
+      transition: background .15s;
+    }
+    .phase-cta:hover { background: var(--red); }
+    .phase-card.featured .phase-cta { background: var(--red); }
+    .phase-card.featured .phase-cta:hover { background: var(--red-d); }
+
+    /* ── ACCORDION ───────────────────────────────── */
+    .accordion { border: 1px solid var(--border); margin-bottom: 2px; }
+    .accordion-header {
+      width: 100%;
+      background: none;
+      border: none;
+      padding: 20px 24px;
+      text-align: left;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 16px;
+      background: var(--bg);
+      transition: background .15s;
+    }
+    .accordion-header:hover { background: var(--light); }
+    .accordion-title {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      color: var(--ink);
+    }
+    .accordion-num {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--red);
+      margin-right: 12px;
+    }
+    .accordion-icon {
+      font-family: var(--mono);
+      font-size: 18px;
+      color: var(--muted);
+      flex-shrink: 0;
+      transition: transform .2s;
+    }
+    .accordion.open .accordion-icon { transform: rotate(45deg); }
+    .accordion-body {
+      display: none;
+      padding: 0 24px 24px;
+      border-top: 1px solid var(--border);
+      background: var(--bg);
+    }
+    .accordion.open .accordion-body { display: block; }
+
+    .spec-list {
+      list-style: none;
+      padding: 20px 0 0;
+    }
+    .spec-list li {
+      padding: 8px 0;
+      border-bottom: 1px solid var(--border);
+      font-size: 14.5px;
+      line-height: 1.6;
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+    .spec-list li:last-child { border-bottom: none; }
+    .spec-list li::before {
+      content: '•';
+      color: var(--red);
+      flex-shrink: 0;
+      margin-top: 1px;
+    }
+    .spec-note {
+      margin-top: 16px;
+      padding: 12px 16px;
+      background: #fff9f9;
+      border-left: 3px solid var(--red);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .spec-note strong { color: var(--ink); }
+
+    /* ── PHASE HEADER ────────────────────────────── */
+    .phase-section-header {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      padding: 16px 0;
+      margin: 32px 0 8px;
+      border-top: 3px solid var(--dark);
+    }
+    .phase-section-header:first-child { margin-top: 0; }
+    .phase-section-roman {
+      font-family: var(--mono);
+      font-size: 13px;
+      color: var(--muted);
+    }
+    .phase-section-name {
+      font-family: var(--serif);
+      font-size: 22px;
+      font-weight: 900;
+    }
+    .phase-section-tag {
+      margin-left: auto;
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      background: var(--light);
+      padding: 4px 10px;
+    }
+
+    /* ── COMPARISON TABLE ───────────────────────── */
+    .compare-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 14.5px;
+    }
+    .compare-table th {
+      font-family: var(--serif);
+      font-weight: 700;
+      font-size: 16px;
+      padding: 16px 20px;
+      text-align: left;
+      background: var(--dark);
+      color: #fff;
+      border-right: 1px solid #333;
+    }
+    .compare-table th:first-child { background: #0a0a0a; }
+    .compare-table td {
+      padding: 14px 20px;
+      border: 1px solid var(--border);
+      vertical-align: top;
+      line-height: 1.5;
+    }
+    .compare-table tr:nth-child(even) td { background: var(--light); }
+    .compare-table td:first-child {
+      font-family: var(--mono);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      background: var(--surface);
+      white-space: nowrap;
+    }
+    .badge-green {
+      display: inline-block;
+      padding: 2px 8px;
+      background: #e8f5e9;
+      color: #1b5e20;
+      font-size: 12px;
+      font-family: var(--mono);
+    }
+    .badge-orange {
+      display: inline-block;
+      padding: 2px 8px;
+      background: #fff3e0;
+      color: #e65100;
+      font-size: 12px;
+      font-family: var(--mono);
+    }
+    .badge-red {
+      display: inline-block;
+      padding: 2px 8px;
+      background: #fce4ec;
+      color: #880e4f;
+      font-size: 12px;
+      font-family: var(--mono);
+    }
+
+    /* ── SPEC BOX ────────────────────────────────── */
+    .spec-box-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+      gap: 2px;
+    }
+    .spec-box {
+      background: var(--surface);
+      padding: 24px 28px;
+      border: 1px solid var(--border);
+    }
+    .spec-box-label {
+      font-family: var(--mono);
+      font-size: 11px;
+      color: var(--muted);
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+    }
+    .spec-box-value {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--ink);
+      margin-bottom: 4px;
+    }
+    .spec-box-sub {
+      font-size: 13px;
+      color: var(--muted);
+    }
+
+    /* ── PROJECTS GRID ───────────────────────────── */
+    .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2px;
+    }
+    .project-item {
+      background: #1a1a1a;
+      padding: 20px 22px;
+      border: 1px solid #333;
+    }
+    .project-status {
+      font-family: var(--mono);
+      font-size: 10px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: var(--red);
+      margin-bottom: 6px;
+    }
+    .project-name {
+      font-family: var(--serif);
+      font-size: 16px;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    /* ── STEPS ───────────────────────────────────── */
+    .steps {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 2px;
+      counter-reset: step;
+    }
+    .step {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      padding: 28px 24px;
+      counter-increment: step;
+      position: relative;
+    }
+    .step::before {
+      content: counter(step);
+      font-family: var(--serif);
+      font-size: 56px;
+      font-weight: 900;
+      color: var(--surface);
+      position: absolute;
+      top: 16px;
+      right: 20px;
+      line-height: 1;
+    }
+    .step-title {
+      font-family: var(--serif);
+      font-size: 18px;
+      font-weight: 700;
+      margin-bottom: 8px;
+    }
+    .step-body { font-size: 14px; color: var(--muted); line-height: 1.6; }
+
+    /* ── CTA SECTION ─────────────────────────────── */
+    .cta-section {
+      background: var(--red);
+      padding: 64px 24px;
+      text-align: center;
+    }
+    .cta-inner { max-width: 640px; margin: 0 auto; }
+    .cta-section .section-h2 { color: #fff; margin-bottom: 12px; }
+    .cta-section .section-lead { color: rgba(255,255,255,.8); margin: 0 auto 32px; }
+    .cta-buttons {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      justify-content: center;
+    }
+    .btn-primary {
+      display: inline-block;
+      padding: 14px 28px;
+      background: #fff;
+      color: var(--red);
+      font-family: var(--mono);
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: opacity .15s;
+    }
+    .btn-primary:hover { opacity: .9; }
+    .btn-secondary {
+      display: inline-block;
+      padding: 14px 28px;
+      background: transparent;
+      border: 2px solid rgba(255,255,255,.5);
+      color: #fff;
+      font-family: var(--mono);
+      font-size: 13px;
+      letter-spacing: 0.5px;
+      text-decoration: none;
+      transition: border-color .15s;
+    }
+    .btn-secondary:hover { border-color: #fff; }
+
+    /* ── FOOTER ─────────────────────────────────── */
+    footer {
+      background: var(--dark);
+      color: #666;
+      padding: 40px 24px;
+      font-size: 13px;
+    }
+    .footer-inner {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 24px;
+      justify-content: space-between;
+      align-items: flex-start;
+    }
+    .footer-brand {
+      font-family: var(--serif);
+      font-size: 20px;
+      font-weight: 700;
+      color: #fff;
+      margin-bottom: 6px;
+    }
+    .footer-brand span { color: var(--red); }
+    footer a { color: inherit; text-decoration: underline; }
+    footer a:hover { color: #fff; }
+
+    /* ── DIVIDER ─────────────────────────────────── */
+    .divider {
+      height: 2px;
+      background: var(--border);
+      margin: 40px 0;
+    }
+    .divider.dark { background: #333; }
+
+    /* ── SCROLL REVEAL ───────────────────────────── */
+    .rv {
+      opacity: 0;
+      transform: translateY(24px);
+      transition: opacity .5s ease, transform .5s ease;
+    }
+    .rv.in {
+      opacity: 1;
+      transform: none;
+    }
+
+    /* ── RESPONSIVE ─────────────────────────────── */
+    @media (max-width: 768px) {
+      .nav-links { display: none; }
+      .hero { padding: 48px 16px; }
+      .section { padding: 48px 16px; }
+      .hero-stats { grid-template-columns: 1fr 1fr; }
+      .compare-table { font-size: 13px; }
+      .compare-table th, .compare-table td { padding: 10px 12px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <div class="nav-inner">
+    <a class="nav-logo" href="https://gvgroup.hu">GV<span>Group</span></a>
+    <ul class="nav-links">
+      <li><a href="#fazisok">Fázisok</a></li>
+      <li><a href="#muszaki">Műszaki tartalom</a></li>
+      <li><a href="#futesek">Fűtési opciók</a></li>
+      <li><a href="#nyilaszarok">Nyílászárók</a></li>
+      <li><a href="#projektek">Projektek</a></li>
+      <li><a href="#kapcsolat">Kapcsolat</a></li>
+    </ul>
+    <a class="nav-cta" href="https://lead.gvgroup.hu">Árajánlat kérése →</a>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-inner">
+    <div class="hero-tag">GV Group Kft. · Műszaki Dokumentáció · 2026</div>
+    <h1 class="hero-h1">MgO SIP Panel<br>Ház — <em>Műszaki<br>Tartalom</em></h1>
+    <p class="hero-sub">Részletes kivitelezési specifikáció vázszerketkész, félkész és kulcsrakész fázisokra. Tesztelt technológia, mérnöki precizitással.</p>
+    <div class="hero-stats">
+      <div class="hero-stat">
+        <div class="stat-val">300<em>km/h</em></div>
+        <div class="stat-label">Szélterhelés</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-val">1200<em>°C</em></div>
+        <div class="stat-label">Tűzállóság</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-val">6.5<em>M</em></div>
+        <div class="stat-label">Földrengés</div>
+      </div>
+      <div class="hero-stat">
+        <div class="stat-val">3–6<em>hó</em></div>
+        <div class="stat-label">Átadási idő</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CERTIFICATIONS BAR -->
+<div class="certs">
+  <div class="certs-inner">
+    <div class="cert-item"><span class="cert-icon">🏆</span> NMÉ engedéllyel rendelkező technológia</div>
+    <div class="cert-item"><span class="cert-icon">🏆</span> OPTEN „A" besorolás — 2% kockázati index</div>
+    <div class="cert-item"><span class="cert-icon">🏆</span> CSOK és CSOK Plusz igénybe vehető</div>
+    <div class="cert-item"><span class="cert-icon">🏆</span> Minden hitelkonstrukció elérhető</div>
+  </div>
+</div>
+
+<!-- PHASE OVERVIEW -->
+<section class="section alt" id="fazisok">
+  <div class="section-inner">
+    <div class="section-tag rv">Készültségi szintek</div>
+    <h2 class="section-h2 rv">Három fázis — egy technológia</h2>
+    <p class="section-lead rv">Az MgO SIP ház bármely készültségi szinten átadható. Az ár tartalmaz mindent az adott fázisig — meglepetés nélkül.</p>
+
+    <div class="phase-grid rv">
+      <!-- Phase I -->
+      <div class="phase-card">
+        <div class="phase-num">I. FÁZIS</div>
+        <div class="phase-name">Vázszerketkész</div>
+        <div class="phase-alt">„Shell" kivitel</div>
+        <div class="phase-price">120 eFt/m² <small>-tól (meglévő alapra)</small></div>
+        <ul class="phase-includes">
+          <li>Földmunka, alap- és lábazati zsalukő</li>
+          <li>Szerelőbeton (10 cm, hálóval)</li>
+          <li>SIP panel fő- és válaszfalak</li>
+          <li>Szeglemezes rácsos tetőszerkezet</li>
+          <li>Bramac Római Merito cserépfedés</li>
+          <li>Páraáteresztő tetőfólia, lécezés</li>
+        </ul>
+        <a class="phase-cta" href="https://lead.gvgroup.hu/?model=vazszerketkesz">Érdeklődöm →</a>
+      </div>
+
+      <!-- Phase II -->
+      <div class="phase-card">
+        <div class="phase-num">II. FÁZIS</div>
+        <div class="phase-name">Félkész</div>
+        <div class="phase-alt">„Half-finished" kivitel</div>
+        <div class="phase-price">130–180 eFt/m² <small>(egyéni igény szerint)</small></div>
+        <ul class="phase-includes">
+          <li>Bádogozás, ereszrendszer</li>
+          <li>Homlokzati kőzetgyapot + ST Line színvakolat</li>
+          <li>Ereszalja burkolás</li>
+          <li>Álmennyezet és gipszkartonozás</li>
+          <li>Víz-, szennyvíz- és villanyszerelés</li>
+          <li>Fűtési rendszer (opciók szerint)</li>
+        </ul>
+        <a class="phase-cta" href="https://lead.gvgroup.hu/?model=felkesz">Érdeklődöm →</a>
+      </div>
+
+      <!-- Phase III -->
+      <div class="phase-card featured">
+        <div class="phase-badge">Legnépszerűbb</div>
+        <div class="phase-num">III. FÁZIS</div>
+        <div class="phase-name">Kulcsrakész</div>
+        <div class="phase-alt">„Turnkey" kivitel</div>
+        <div class="phase-price">460–480 eFt/m² <small>(alapozással együtt)</small></div>
+        <ul class="phase-includes">
+          <li>Teljes alapozás (talajmechanika alapján)</li>
+          <li>MgO SIP panel falszerkezet</li>
+          <li>Komplett gépészet (víz, villany, fűtés)</li>
+          <li>Nyílászárók (GEALAN / VEKA minőség)</li>
+          <li>Burkolatok és festés</li>
+          <li>Beltéri ajtók, homlokzati vakolat</li>
+        </ul>
+        <a class="phase-cta" href="https://lead.gvgroup.hu/?model=kulcsrakesz">Árajánlatot kérek →</a>
+      </div>
+    </div>
+
+    <p style="margin-top:20px; font-size:13px; color:var(--muted);">
+      ⚠️ Az árak normál sík terepen, Debrecen 100 km-es körzetében értendők. Dombos telek vagy különleges terepviszonyok esetén egyedi árajánlat készül.
+    </p>
+  </div>
+</section>
+
+<!-- DETAILED TECHNICAL CONTENT -->
+<section class="section" id="muszaki">
+  <div class="section-inner">
+    <div class="section-tag rv">Részletes specifikáció</div>
+    <h2 class="section-h2 rv">Műszaki tartalom fázisok szerint</h2>
+    <p class="section-lead rv">Minden munkafázis pontos, tételes leírása — amit az ajánlat tartalmaz, nincs rejtett tétel.</p>
+
+    <!-- PHASE I HEADER -->
+    <div class="phase-section-header rv">
+      <span class="phase-section-roman">I.</span>
+      <span class="phase-section-name">Vázszerketkész</span>
+      <span class="phase-section-tag">9 munkafázis</span>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">01</span><span class="accordion-title">Előkészületek és kitűzés</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Humuszeltolás, szükséges növényzet kiirtása és tereprendezés — ügyfél feladata és költsége</li>
+          <li>Víz- és áramvételi lehetőség, illemhely biztosítása az építési területen</li>
+          <li>GPS-es szintezőműszerrel, hivatásos földmérő általi telek jogi határ és épületsarokpontok kitűzése</li>
+          <li>Az épület (±0) pontjának meghatározása egy végleges tereptárgyon</li>
+        </ul>
+        <div class="spec-note"><strong>Megjegyzés:</strong> A jogszabály által előírt talajmechanikai vizsgálat elvégzése a megrendelő feladata és költsége.</div>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">02</span><span class="accordion-title">Földmunka és alapozás</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Az alapozás földmunkái gépi és kézi munkával</li>
+          <li>Külső szerkezeti falak alatt optimális esetben 0,9 m mélységű, 30 cm széles sávalap, gépi vagy kézi keveréssel, terv szerinti vasalással</li>
+        </ul>
+        <div class="spec-note"><strong>Fontos:</strong> Szélsőséges talajmechanikai jellemzők (magas talajvíz, duzzadó agyag, támfal igény) esetén műszaki tartalmunktól eltérően többletmunkára árajánlat készül.</div>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">03</span><span class="accordion-title">Lábazati zsalukő és vasalás</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Lábazat: 1 sor magas, 20 cm széles Leier v. Frühwald beton zsaluzó elem terepszinttől</li>
+          <li>Zsalutéglában 2 db Ø8 mm-es vízszintesen elhelyezett betonvasalás, saroknál átvezetéssel (fedésbe)</li>
+          <li>Zsalukőben függőleges vasalás is készül</li>
+          <li>Lábazati zsalukő 5 cm XPS lábazati szigetelést kap</li>
+          <li>Lábazati falak közé rétegesen, géppel tömörített töltésföld, majd tömörített kavicságy</li>
+          <li>Lábazati földfeltöltésben elhelyezésre kerülnek a víz- és szennyvízcsövek</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">04–05</span><span class="accordion-title">Szerelőbeton és szigetelés</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Szerelőbeton: 10 cm vastag, Ø6-os hegesztett 15×15 cm-es betonacél, 20 cm átfedéssel</li>
+          <li>Helyszíni keveréssel vagy transzportbetonnal öntve; locsolandó 3–6 napig</li>
+          <li>Aljzatszigetelés: 10 cm lépésálló polisztirol hőszigetelés</li>
+          <li>Hőtükrös-légpárnás-párazáró szigetelő alátétfólia</li>
+          <li>7–8 cm vastagságú, 280 kg/m³ cementtartalmú helyszíni esztrich aljzatbeton</li>
+          <li>Aljzatbetonban 15×15 cm-es kiosztású, Ø4 mm-es vasmhálóval erősítve</li>
+          <li>Beton adalékanyaga miatt utókezelés nem szükséges; padloponozás általában nem kell</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">06</span><span class="accordion-title">MgO SIP panel falszerkezet</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <div class="spec-box-grid" style="margin-bottom:20px">
+          <div class="spec-box">
+            <div class="spec-box-label">Panel alap méret</div>
+            <div class="spec-box-value">3000 × 1250 mm</div>
+            <div class="spec-box-sub">Egyedi gyártmányterv alapján</div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-box-label">Hőszigetelés</div>
+            <div class="spec-box-value">14 cm</div>
+            <div class="spec-box-sub">Formahabosított EPS/MgO</div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-box-label">Borítás</div>
+            <div class="spec-box-value">1,25 cm OSB</div>
+            <div class="spec-box-sub">Kívül-belül egyaránt</div>
+          </div>
+        </div>
+        <p style="font-weight:600; margin-bottom:8px; font-size:15px;">Főfal rétegrendje:</p>
+        <ul class="spec-list">
+          <li>SIP panel tábla alapmérete 3000×1250 mm, egyedi gyártmányterv szerint statikai tervhez igazítva</li>
+          <li>14 cm formahabosított hőszigetelés a szerkezet között</li>
+          <li>1,25 cm vastag OSB borítás kívül és belül egyaránt</li>
+          <li>Belső oldalon: OSB-re 2 réteg RF gipszkarton; villamosvezetékeknél 3 cm párnafával</li>
+          <li>Külső oldalon: OSB-re alapból 10 cm kőzetgyapot homlokzati szigetelés + ST Line nemesvakolati rendszer (EPS is alkalmazható)</li>
+        </ul>
+        <p style="font-weight:600; margin: 16px 0 8px; font-size:15px;">Válaszfal rétegrendje:</p>
+        <ul class="spec-list">
+          <li>1,25 cm RF gipszkarton tábla</li>
+          <li>5×10 cm szárított, gyalult tartószerkezeti fa, közte 10 cm hang- és hőszigetelő üveggyapot</li>
+          <li>1,25 cm RF gipszkarton tábla</li>
+        </ul>
+        <div class="spec-note"><strong>Figyelem:</strong> Amennyiben a külső vakolatrendszertől vagy az építésztervekben szereplő színektől el kell térni, azt még az engedélyek beadása előtt kell egyeztetni!</div>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">07</span><span class="accordion-title">Födém- és tetőszerkezet</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Üzemben készített, előregyártott, egyedileg statikailag méretezett szeglemezes rácsos tartó</li>
+          <li>A tetőszerkezet favédelmét mártott technológiával végezzük</li>
+          <li>Födém szigetelése: Isocell befújásos szigetelés 25–30 cm vastagságban, vagy bálás üveggyapot 3×10 cm vastagságban</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">08</span><span class="accordion-title">Tetőfedés</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Tetőfelület fóliázása páraáteresztő tetőfóliával</li>
+          <li>Ellenléc-lécezés 28×48 mm-es Bramac léccel</li>
+          <li>Cserepezés: Bramac Római Merito cserépcsalád (vagy hasonló ár-értékarányú cserép)</li>
+          <li>Opcióként kérhető: zsindely, cserepeslemezes vagy korcolt lemezes fedés értékegyeztetéssel</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- PHASE II HEADER -->
+    <div class="phase-section-header rv" style="margin-top:48px">
+      <span class="phase-section-roman">II.</span>
+      <span class="phase-section-name">Félkész fázis</span>
+      <span class="phase-section-tag">6 munkafázis</span>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">09</span><span class="accordion-title">Bádogozás és ereszrendszer</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Ereszrendszer szín azonos a cseréppel</li>
+          <li>Tető vápalemeze horganyzott (opció: színazonos a cseréppel, felár ellenében)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">10</span><span class="accordion-title">Vakolatrendszer és homlokzat</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Hőszigetelés: 100 mm vastagságú minősített homlokzati kőzetgyapot szigetelő tábla</li>
+          <li>Kőzetgyapot lapokat OSB falszerkezethez először gyorskötésű ragasztóhabbal kötjük</li>
+          <li>Ezt követően mechanikai rögzítés: 5×120 mm hosszú rozsdamentes csavarok + hőhídmentes műanyag tárcsás alátétek</li>
+          <li>Kőzetgyapot (EPS) lapok felülete EPS ragasztóba ágyazott üvegszál erősítésű hálóval</li>
+          <li>Vékonyvakolat EPS ragasztóval 2 rétegben, finomcsiszolással egyenletesre</li>
+          <li>Alapozó festés → ST Line 1,5 mm vastagságú színes nemesvakolat pasztell árnyalatban</li>
+          <li>Lábazati szigetelés: 5 vagy 8 cm XPS (homlokzati szigetelés vastagságától függően)</li>
+        </ul>
+        <div class="spec-note"><strong>Fontos:</strong> Ezt a munkafázist +5 és +25°C között lehet elvégezni!</div>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">11</span><span class="accordion-title">Álmennyezet és gipszkartonozás</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Álmennyezet: a gerendákra szálú hőtükör fólia → CD=60 mm-es függesztett acélszerkezet → 12,5 mm RF gipszkarton</li>
+          <li>Külső falakon airstop-, a födémen tükrös párazáró fólia</li>
+          <li>Külső fal belső oldalán 2 réteg gipszkarton burkolat; éleken élvédők</li>
+          <li>Belső falak mindkét oldalán 1 réteg 12 mm-es gipszkarton</li>
+          <li>Gipszkarton típusa: Rigips vagy Knauf</li>
+          <li>Minden helyiségben piros RF (tűzgátló) gipszkarton</li>
+          <li>Vizes helyiségekben impregnált kartonozás</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">12</span><span class="accordion-title">Épületgépészet — víz és szennyvíz</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <p style="font-weight:600; margin-bottom:10px; font-size:15px;">Használati víz:</p>
+        <ul class="spec-list">
+          <li>Csővezetékek az aljzatszigetelésben, illetve a falvázszerkezetben elrejtve</li>
+          <li>Unipress 5 rétegű szigetelt, hosszú élettartamú csövek; csőroppantós kötőelemekkel</li>
+          <li>Mosógép és mosogatógép részére falba épített vízvételi és vízelvezető csatlakozó</li>
+        </ul>
+        <p style="font-weight:600; margin: 16px 0 10px; font-size:15px;">Szennyvíz:</p>
+        <ul class="spec-list">
+          <li>WC-nél Ø110 mm PVC csövek, tokos gumikötéssel</li>
+          <li>Mosdók, kádak, zuhanyzók: Ø50 mm PVC csövek</li>
+        </ul>
+        <div class="spec-note"><strong>Megjegyzés:</strong> A szanitereket az ajánlat alapból nem tartalmazza; az ügyfél által vásárolt szaniterek beépítését igen.</div>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">13</span><span class="accordion-title">Villanyszerelés</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>MBCU védőcsöves, belső osztódoboz nélküli kivitel</li>
+          <li>Szerelvények: Legrand Valena vagy Schneider, fehér színben</li>
+          <li>Külső közmű bekötéseket és az épülettől >1 m-es kábelt az ajánlat nem tartalmazza</li>
+        </ul>
+        <p style="font-weight:600; margin:16px 0 10px; font-size:15px;">Alap szerelvénylista:</p>
+        <table class="compare-table" style="margin-top:0">
+          <thead>
+            <tr>
+              <th>Helyiség</th>
+              <th>Szerelvények</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr><td>Nappali, konyha, étkező, fürdő</td><td>1 db kapcsoló, 3 db konnektor, 1 db lámpakiállás, TV és internet csatlakozó</td></tr>
+            <tr><td>WC</td><td>1 db kapcsoló, 1 db lámpakiállás</td></tr>
+            <tr><td>Előszoba / Folyosó</td><td>1 db kapcsoló, 1 db lámpakiállás</td></tr>
+            <tr><td>Bejáratnál (kívül)</td><td>1 db kapcsoló, 1 db lámpakiállás</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- PHASE III HEADER -->
+    <div class="phase-section-header rv" style="margin-top:48px">
+      <span class="phase-section-roman">III.</span>
+      <span class="phase-section-name">Kulcsrakész fázis</span>
+      <span class="phase-section-tag">4 munkafázis</span>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">14</span><span class="accordion-title">Felületképzések — festés és glettelés</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Elkészült gipszkarton felületek glettelve és 3 sor festve (1 sor fehér alap + 2 sor kért szín) pasztell árnyalatban</li>
+          <li>Pozitív éleken élvédők, negatív éleken üvegszövet háló</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">15</span><span class="accordion-title">Burkolás — hideg- és melegburkolat</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <p style="font-weight:600; margin-bottom:10px; font-size:15px;">Hidegburkolat (konyha, kamra, fürdő, WC, háztartási):</p>
+        <ul class="spec-list">
+          <li>Bruttó 5.000 Ft/m² beszerzési értékű burkolat (ügyfél által is megadható)</li>
+          <li>Segédanyagok (ragasztó, fugázó, élvédő) biztosítva</li>
+          <li>Alapból 33×33-as méretű, hálós lerakás</li>
+          <li>Fürdőben és vizes helyiségekben kenhető vízszigetelés</li>
+          <li>Burkolás fürdőben és WC-ben 180 cm magasságig; kamrában, háztartásiban 150 cm-ig</li>
+        </ul>
+        <p style="font-weight:600; margin:16px 0 10px; font-size:15px;">Melegburkolat (nappali, hálószoba, gardrób):</p>
+        <ul class="spec-list">
+          <li>Bruttó 5.000 Ft/m² anyag + segédanyag árban kalkulálva</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">16</span><span class="accordion-title">Beltéri ajtók</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <ul class="spec-list">
+          <li>Utólag szerelhető beltéri ajtók, bruttó 80.000 Ft/db értéken (kilinccsel együtt)</li>
+          <li>Ha a megrendelő egyedi ajtót rendel, a különbözetet a kivitelező pótmunkaként számolja fel</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="accordion rv">
+      <button class="accordion-header">
+        <span><span class="accordion-num">17</span><span class="accordion-title">Külső nyílászárók</span></span>
+        <span class="accordion-icon">+</span>
+      </button>
+      <div class="accordion-body">
+        <div class="spec-box-grid" style="margin-bottom:20px">
+          <div class="spec-box">
+            <div class="spec-box-label">Profilrendszer</div>
+            <div class="spec-box-value">GEALAN S8000 IQ</div>
+            <div class="spec-box-sub">vagy VEKA, fehér, horganyzott idomacél merevítéssel</div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-box-label">Üveg</div>
+            <div class="spec-box-value">3 réteg argon</div>
+            <div class="spec-box-sub">U = 0,7 W/m²K szigetelési érték</div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-box-label">Légkamrák</div>
+            <div class="spec-box-value">5–6 kamra</div>
+            <div class="spec-box-sub">Minősített műanyag profil</div>
+          </div>
+          <div class="spec-box">
+            <div class="spec-box-label">Bejárati ajtó</div>
+            <div class="spec-box-value">150.000 Ft-ig</div>
+            <div class="spec-box-sub">5 pontos zárás, cserélhető design panel</div>
+          </div>
+        </div>
+        <ul class="spec-list">
+          <li>Kiemelten hőszigetelt, 3 rétegű argon gázzal töltött üvegezés alapban</li>
+          <li>Ablakok külső extrudált alumínium- és belső műanyag párkányai fehér színben</li>
+          <li>Rendelhető opcióként: színes fóliázott műanyag nyílászárók, alumínium nyílászárók</li>
+        </ul>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- HEATING OPTIONS -->
+<section class="section alt" id="futesek">
+  <div class="section-inner">
+    <div class="section-tag rv">Fűtési opciók</div>
+    <h2 class="section-h2 rv">Három fűtési megoldás</h2>
+    <p class="section-lead rv">Az MgO SIP ház kiváló hőszigetelése miatt minden fűtési rendszer hatékonyan működik. Válasszon az igényei szerint.</p>
+
+    <div class="rv" style="overflow-x:auto">
+      <table class="compare-table">
+        <thead>
+          <tr>
+            <th>Szempont</th>
+            <th>⚡ Elektromos<br><small style="font-weight:400;font-size:12px;">Alapkivitel</small></th>
+            <th>⚙ Gázkazán<br><small style="font-weight:400;font-size:12px;">1. Opció</small></th>
+            <th>🌿 Hőszivattyú<br><small style="font-weight:400;font-size:12px;">2. Opció</small></th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Beruházási költség</td>
+            <td><span class="badge-green">Alacsony</span></td>
+            <td><span class="badge-orange">Közepes</span></td>
+            <td><span class="badge-red">Magas</span></td>
+          </tr>
+          <tr>
+            <td>Üzemeltetési költség</td>
+            <td><span class="badge-red">Magas</span></td>
+            <td><span class="badge-orange">Közepes</span></td>
+            <td><span class="badge-green">Alacsony</span></td>
+          </tr>
+          <tr>
+            <td>Környezetbarát</td>
+            <td><span class="badge-orange">Közepes</span></td>
+            <td><span class="badge-red">Kevésbé</span></td>
+            <td><span class="badge-green">Igen</span></td>
+          </tr>
+          <tr>
+            <td>Karbantartás</td>
+            <td><span class="badge-green">Minimális</span></td>
+            <td><span class="badge-orange">Rendszeres</span></td>
+            <td><span class="badge-green">Kevés</span></td>
+          </tr>
+          <tr>
+            <td>Konkrét megoldás</td>
+            <td>DIMAT / BVF fűtőháló, 20 m²-ként egyéni termosztátos vezérléssel</td>
+            <td>Bosch 2300-28 kW kombi kondenzációs gázkazán, programozható termosztáttal</td>
+            <td>Terralux Sunglow 9 monoblokk levegő–víz, 1 fázis, 3,5–8,8 kW DC inverter, R290, A+++</td>
+          </tr>
+          <tr>
+            <td>Különleges feltétel</td>
+            <td>—</td>
+            <td>Belső Gázellátás Engedélyezési Tervdokumentáció szükséges</td>
+            <td>WiFi-s vezérlés, passzívházhoz is ajánlott</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</section>
+
+<!-- WHY SIP -->
+<section class="section dark" id="technologia">
+  <div class="section-inner">
+    <div class="section-tag rv" style="color:var(--red)">Technológia</div>
+    <h2 class="section-h2 rv" style="color:#fff">Miért MgO SIP technológia?</h2>
+    <p class="section-lead rv">Tesztelt szerkezet, amit az Európai Uniós normák is elismernek.</p>
+
+    <div class="phase-grid rv">
+      <div style="background:#1a1a1a; border:1px solid #333; padding:32px">
+        <div style="font-size:32px; margin-bottom:16px">🏗</div>
+        <div style="font-family:var(--serif); font-size:20px; font-weight:700; color:#fff; margin-bottom:8px">Gyors kivitelezés</div>
+        <div style="font-size:14px; color:#999; line-height:1.7">Kulcsrakész házát átlagosan 3–6 hónap alatt adjuk át. A panelrendszer lehetővé teszi a párhuzamos munkafolyamatokat.</div>
+      </div>
+      <div style="background:#1a1a1a; border:1px solid #333; padding:32px">
+        <div style="font-size:32px; margin-bottom:16px">🌡</div>
+        <div style="font-family:var(--serif); font-size:20px; font-weight:700; color:#fff; margin-bottom:8px">Kiváló hőtechnika</div>
+        <div style="font-size:14px; color:#999; line-height:1.7">A 14 cm-es formahabosított mag és a legalább 10 cm homlokzati kőzetgyapot együttesen passzívházhoz közeli teljesítményt nyújtanak.</div>
+      </div>
+      <div style="background:#1a1a1a; border:1px solid #333; padding:32px">
+        <div style="font-size:32px; margin-bottom:16px">💪</div>
+        <div style="font-family:var(--serif); font-size:20px; font-weight:700; color:#fff; margin-bottom:8px">Extrém szilárdság</div>
+        <div style="font-size:14px; color:#999; line-height:1.7">300 km/h szél, 1200°C tűzállóság, 6,5-ös Richter-skálájú földrengés — a technológia mindezeket tesztelt körülmények között állja.</div>
+      </div>
+      <div style="background:#1a1a1a; border:1px solid #333; padding:32px">
+        <div style="font-size:32px; margin-bottom:16px">💳</div>
+        <div style="font-family:var(--serif); font-size:20px; font-weight:700; color:#fff; margin-bottom:8px">Hitelképes technológia</div>
+        <div style="font-size:14px; color:#999; line-height:1.7">NMÉ engedély biztosítja a hitelképességet. CSOK, CSOK Plusz és valamennyi banki hitelkonstrukció igénybe vehető.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CURRENT PROJECTS -->
+<section class="section dark" id="projektek" style="padding-top:0">
+  <div class="section-inner">
+    <div class="divider dark"></div>
+    <div class="section-tag rv" style="color:var(--red)">Referenciák</div>
+    <h2 class="section-h2 rv" style="color:#fff">Jelenleg épülő és elérhető projektek</h2>
+    <p class="section-lead rv">Látogasson el személyesen — megtekintheti az épülő házainkat és az építtetőkkel is beszélhet.</p>
+
+    <div class="projects-grid rv">
+      <div class="project-item">
+        <div class="project-status">▶ Jelenleg épül</div>
+        <div class="project-name">Miskolc – Bedegvölgyi u.</div>
+      </div>
+      <div class="project-item">
+        <div class="project-status">▶ Jelenleg épül</div>
+        <div class="project-name">Ostoroson</div>
+      </div>
+      <div class="project-item">
+        <div class="project-status">▶ Jelenleg épül</div>
+        <div class="project-name">Berekfürdőn</div>
+      </div>
+      <div class="project-item">
+        <div class="project-status">▶ Jelenleg épül</div>
+        <div class="project-name">Derecskén</div>
+      </div>
+      <div class="project-item">
+        <div class="project-status">▶ Jelenleg épül</div>
+        <div class="project-name">Ebesen</div>
+      </div>
+      <div class="project-item">
+        <div class="project-status">▶ Jelenleg épül</div>
+        <div class="project-name">Nyíregyháza-Oros</div>
+      </div>
+      <div class="project-item">
+        <div class="project-status">🏘 Megvásárolható</div>
+        <div class="project-name">Téglás – Városháza u.</div>
+      </div>
+      <div class="project-item">
+        <div class="project-status">🚀 Hamarosan</div>
+        <div class="project-name">Sáránd, Sajóivánka,<br>Debrecen környéke</div>
+      </div>
+    </div>
+
+    <p style="margin-top:24px; font-size:14px; color:#666;">Ingyenes és kötelezettségmentes megtekintés — hívjon minket előzetesen: <a href="tel:+36302699018" style="color:var(--red);text-decoration:none; font-family:var(--mono)">+36 30 269 9018</a></p>
+  </div>
+</section>
+
+<!-- NEXT STEPS -->
+<section class="section" id="kapcsolat">
+  <div class="section-inner">
+    <div class="section-tag rv">Hogyan tovább?</div>
+    <h2 class="section-h2 rv">5 lépés az álmai otthonig</h2>
+    <p class="section-lead rv">Egyszerű, átlátható folyamat — az első konzultációtól a kulcsátvételig.</p>
+
+    <div class="steps rv">
+      <div class="step">
+        <div class="step-title">Első konzultáció</div>
+        <div class="step-body">Hívjon minket vagy küldjön e-mailt. Átbeszéljük elképzeléseit, igényeit és a lehetséges megoldásokat.</div>
+      </div>
+      <div class="step">
+        <div class="step-title">Helyszíni megtekintés</div>
+        <div class="step-body">Látogasson el egy épülő házunkhoz. Ingyenes és kötelezettségmentes — az építtetőkkel is tud majd beszélni.</div>
+      </div>
+      <div class="step">
+        <div class="step-title">Árajánlat kérése</div>
+        <div class="step-body">Elküldjük a tájékoztató anyagokat és a részletes árajánlatot, MgO és hagyományos technológiával is.</div>
+      </div>
+      <div class="step">
+        <div class="step-title">Műszaki egyeztetés</div>
+        <div class="step-body">Átbeszéljük az egyedi igényeket és a műszaki részleteket — pontos végárat adunk, nem közelítőt.</div>
+      </div>
+      <div class="step">
+        <div class="step-title">Építkezés kezdés!</div>
+        <div class="step-body">3–6 hónap múlva már költözhet is álmai otthonába. Teljes körű támogatás az engedélyektől a banki ügyintézésig.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<div class="cta-section">
+  <div class="cta-inner">
+    <h2 class="section-h2">Kérjen ingyenes árajánlatot most</h2>
+    <p class="section-lead">Kötelezettségmentes, részletes kalkuláció. Az ajánlat belinkelt műszaki tartalommal érkezik, hogy pontosan tudja, mit kap.</p>
+    <div class="cta-buttons">
+      <a class="btn-primary" href="https://lead.gvgroup.hu">Árajánlat kérése →</a>
+      <a class="btn-secondary" href="tel:+36302699018">📞 +36 30 269 9018</a>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div>
+      <div class="footer-brand">GV<span>Group</span> Kft.</div>
+      <div>Tarján u. 37., Debrecen 4032</div>
+      <div>Adószám: 25189139-2-09</div>
+      <div>Cégjegyzékszám: 09-09-026901</div>
+    </div>
+    <div>
+      <div style="color:#fff; margin-bottom:8px">Elérhetőség</div>
+      <div><a href="tel:+36302699018">+36 30 269 9018</a></div>
+      <div><a href="https://gvgroup.hu">www.gvgroup.hu</a></div>
+      <div>H–P: 08:00–16:00 · Szo: 08:00–12:00</div>
+    </div>
+    <div>
+      <div style="color:#fff; margin-bottom:8px">Jogi</div>
+      <div><a href="https://gvgroup.hu/impresszum/">Impresszum</a></div>
+      <div><a href="https://gvgroup.hu/adatkezelesi-tajekoztato/">Adatkezelési tájékoztató</a></div>
+    </div>
+    <div style="max-width:240px">
+      <div style="font-family:var(--mono); font-size:11px; color:#444; line-height:1.8">
+        Ez a dokumentum a GV Group Kft. standard kivitelezési specifikációit tartalmazza 2026-ra vonatkozóan. Egyedi igények esetén külön árajánlat készül. A dokumentumban szereplő anyagok és technológiák minőségi kivitelezést garantálnak.
+      </div>
+    </div>
+  </div>
+</footer>
+
+<!-- ACCORDION JS -->
+<script>
+document.querySelectorAll('.accordion-header').forEach(function(btn) {
+  btn.addEventListener('click', function() {
+    var acc = this.closest('.accordion');
+    var wasOpen = acc.classList.contains('open');
+    acc.classList.toggle('open', !wasOpen);
+  });
+});
+</script>
+
+<!-- SCROLL REVEAL -->
+<script>
+(function() {
+  var els = document.querySelectorAll('.rv');
+  var io = new IntersectionObserver(function(entries) {
+    entries.forEach(function(e) {
+      if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); }
+    });
+  }, { threshold: 0.1 });
+  els.forEach(function(el) { io.observe(el); });
+})();
+</script>
+
+</body>
+</html>
